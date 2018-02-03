@@ -15,7 +15,7 @@ data1.df <- data.df[data.df$grade == 1, ]
 
 ##### Code 3. Export data to a .txt file
 
-write.table(data1.df, "work/eye-tracking-numeric-data1.txt", row.names = FALSE)
+write.table(data1.df, "work/eye-track-numeric-data1.txt", row.names = FALSE)
 
 
 ##### Code 4. Correlation coefficient between two variables
