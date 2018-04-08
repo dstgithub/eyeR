@@ -137,7 +137,7 @@ install.packages("GrpString") # if the package has not been installed
 library(GrpString)
 
 # convert AOIs to scanpaths using function EveString()
-s2 <- EveString("output/q11_aoi_proc_phase2.txt", conv.df$aoi, conv.df$code)
+s2 <- EveString("data/q11_aoi_proc_phase2.txt", conv.df$aoi, conv.df$code)
 head(s2, 3)
 
 
