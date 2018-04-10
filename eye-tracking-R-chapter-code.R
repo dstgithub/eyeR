@@ -84,9 +84,12 @@ head(aoiFiles11[[1]], 3)
 ## Find difference between the last and 1st timestamps (in ms)
 
 # number of rows of each data frame
+# aoiFiles11 is the list containing 81 data frames (Code 10)
+# each data frame has two columns, Timestamp and AoiNames
 nrow_q11 <- lapply(aoiFiles11, function(x) nrow(x))
 
-# difference between the last ([nrow_q11[[i]], 1]) and 1st ([1, 1]) timestamps in ith # data frame: 
+# difference between the last ([nrow_q11[[i]], 1]) and 1st ([1, 1]) timestamps in ith data frame: 
+# iterate through all the 81 data frames                   
 dif_q11 <- lapply(1:81, function(i) {
   aoiFiles11[[i]][nrow_q11[[i]], 1] - aoiFiles11[[i]][1, 1]
 })
@@ -165,7 +168,7 @@ ptn1.df
 
 
 ##### Code 15. Generate word cloud to visualize scanpath patterns and frequencies
-
+### This part has been removed from the chapter.
 install.packages("wordcloud")
 library(wordcloud)
 png("work/wordcloud.png", width = 500, height = 470)
